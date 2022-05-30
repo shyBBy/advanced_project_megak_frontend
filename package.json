@@ -10,7 +10,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
-    "@googlemaps/react-wrapper": "^1.1.33",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
@@ -18,22 +17,20 @@
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
     "bootstrap": "^5.1.3",
-    "formik": "^2.2.9",
     "leaflet": "^1.8.0",
     "react": "^18.1.0",
-    "react-app-rewired": "^2.2.1",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0",
     "react-leaflet": "^4.0.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
     "typescript": "^4.6.4",
-    "web-vitals": "^2.1.4",
-    "yup": "^0.32.11"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build:win": "set REACT_APP_API_URL=/api&& react-app-rewired build",
+    "build:unix": "REACT_APP_API_URL=/api react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
@@ -64,6 +61,6 @@
     "@types/react-dom": "^18.0.2",
     "customize-cra": "^1.0.0",
     "react-app-rewire-alias": "^1.1.7",
-    "typescript": "^4.6.3"
+    "react-app-rewired": "^2.2.1"
   }
 }

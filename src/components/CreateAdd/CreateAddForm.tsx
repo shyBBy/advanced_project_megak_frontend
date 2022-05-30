@@ -2,6 +2,7 @@ import React, {FormEvent, SyntheticEvent, useState} from "react";
 import {Alert, Button, Card, Container, Form, Spinner} from "react-bootstrap";
 import {geocode} from "../../utils/geocoding";
 import {Link} from "react-router-dom";
+import { apiUrl } from "src/config/api";
 
 
 
@@ -29,7 +30,7 @@ export const CreateAddFormForm = () => {
             const {lat, lon} = await geocode(form.address);
 
 
-            const res = await fetch(`http://localhost:3002/ad`, {
+            const res = await fetch(`${apiUrl}/ad`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

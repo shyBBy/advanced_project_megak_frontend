@@ -2,7 +2,7 @@ import React, {FormEvent, SyntheticEvent, useState} from "react";
 import {Alert, Button, Card, Container, Form, Spinner} from "react-bootstrap";
 import {geocode} from "../../utils/geocoding";
 import {Link} from "react-router-dom";
-import { apiUrl } from "src/config/api";
+import { apiUrl } from "../../config/api";
 
 
 

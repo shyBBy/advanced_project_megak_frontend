@@ -6,7 +6,7 @@ import './Map.css'
 import {SearchContext} from "../../contexts/search.context";
 import { SimpleAdEntity } from "types";
 import { SingleAd } from "./SingleAd";
-import { apiUrl } from "src/config/api";
+import { apiUrl } from "../../config/api";
 
 export const Map = () => {
     const {search} = useContext(SearchContext);
@@ -15,7 +15,7 @@ export const Map = () => {
     useEffect(() => {
 
         (async () => {
-            const res = await fetch(`${apiUrl}ad/search/${search}`);
+            const res = await fetch(`${apiUrl}/ad/search/${search}`);
             const data = await res.json();
 
             setAds(data);
